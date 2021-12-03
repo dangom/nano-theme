@@ -29,7 +29,7 @@
   "Color palette for dark theme" :group 'nano)
 
 (defface nano-mono
-  '((t (:family "Roboto Mono Light"
+  '((t (:family "Roboto Mono Regular"
 	            :height 140
                 )))
   "Default monospaced font (Roboto Mono Light, 14pt)."
@@ -45,19 +45,21 @@
 
 (defface nano-sans
   '((t (:family "Roboto"
-	:height 140
-	:weight light)))
+	            :height 140
+	            ;; :weight light
+                )))
   "Default proportional sans font (Roboto Light, 14pt)."
   :group 'nano)
 
 (defface nano-serif
   '((t (:family "Roboto Slab"
-	:height 140
-	:weight light)))
+	            :height 140
+	            ;; :weight light
+                )))
   "Default proportional serif font (Roboto Slab Light, 14pt)."
   :group 'nano)
 
-(defcustom nano-light-foreground "#37474F" ;; Blue Grey / L800
+(defcustom nano-light-foreground "#263238" ;; Blue Grey / L900
   "Default foreground color"
   :type 'color :group 'nano-light)
 
@@ -73,7 +75,7 @@
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'nano-light)
 
-(defcustom nano-light-faded "#B0BEC5" ;; Blue Grey / L200
+(defcustom nano-light-faded "#78909C" ;; Blue Grey / L400
   "Faded face is for information that are less important."
   :type 'color :group 'nano-light)
 
@@ -85,7 +87,7 @@
   "Strong color is used for information of a structural nature."
   :type 'color :group 'nano-light)
 
-(defcustom nano-light-popout "#FFAB91" ;; Deep Orange / L200
+(defcustom nano-light-popout "#FF8A65" ;; Deep Orange / L300
   "Popout colour is used for information that needs attention."
   :type 'color :group 'nano-light)
 
@@ -206,7 +208,7 @@ background color that is barely perceptible."
   (set-frame-parameter nil 'height 45)
   (set-frame-parameter nil 'left-fringe 0)
   (set-frame-parameter nil 'right-fringe 0)
-  (if (fboundp 'tool-bar-mode) (tool-bar-mode nil))
+  (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
   (tooltip-mode -1)
   (scroll-bar-mode -1)
   (menu-bar-mode -1)
@@ -319,16 +321,16 @@ background color that is barely perceptible."
 
    
    `(nano-strong ((,light (:foreground ,nano-light-strong
-                           :family "Roboto Mono Medium"))
+                           :family "Roboto Mono SemiBold"))
 		  (,dark  (:foreground ,nano-dark-strong
-                           :family "Roboto Mono Medium"))))
+                           :family "Roboto Mono SemiBold"))))
 
    `(nano-strong-i ((,light (:foreground ,nano-light-background
                              :background ,nano-light-strong
-                             :family "Roboto Mono Medium"))
+                             :family "Roboto Mono SemiBold"))
                     (,dark  (:foreground ,nano-dark-background
                              :background ,nano-dark-strong
-                             :family "Roboto Mono Medium"))))
+                             :family "Roboto Mono SemiBold"))))
 
    `(nano-popout ((,light (:foreground ,nano-light-popout))
                   (,dark  (:foreground ,nano-dark-popout))))
@@ -361,8 +363,8 @@ background color that is barely perceptible."
 			       :color ,nano-dark-faded
 			       :style nil)))))
    `(mode-line-highlight ((t (:inherit nano-popout))))
-   `(mode-line-buffer-id ((t (:family "Roboto Mono Regular"))))
-   `(mode-line-emphasis  ((t (:family "Roboto Mono Regular"))))
+   `(mode-line-buffer-id ((t (:family "Roboto Mono Medium"))))
+   `(mode-line-emphasis  ((t (:family "Roboto Mono Medium"))))
 			   
    `(mode-line-inactive ((,light (:foreground ,nano-light-background
                                   :background ,nano-light-faded
