@@ -1,5 +1,24 @@
 ## GNU Emacs / N Λ N O Theme 
 
+__
+Fork of nano-theme with a hacky fix support for MacOS BigSur.
+
+In order to use it, first download all of the Roboto Mono fonts
+[here.](https://fonts.google.com/specimen/Roboto+Mono)
+Then, go to the folder called static in the download directory and run the
+following command:
+
+```sh
+for font in RobotoMono*; do python3 fontname.py
+"Roboto Mono ${${${font/RobotoMono-/}/.ttf}/Italic}" $font ; done
+```
+
+where fontname.py can be found
+[here.](https://github.com/chrissimpkins/fontname.py)
+
+Finally, install the fonts and the theme should work.
+__
+
 A consistent theme for GNU Emacs. The light theme is based on [Material
 colors](https://material.io/) and the dark theme is based on [Nord
 colors](https://www.nordtheme.com/).

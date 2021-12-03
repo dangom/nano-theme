@@ -29,9 +29,9 @@
   "Color palette for dark theme" :group 'nano)
 
 (defface nano-mono
-  '((t (:family "Roboto Mono"
-	:height 140
-	:weight light)))
+  '((t (:family "Roboto Mono Light"
+	            :height 140
+                )))
   "Default monospaced font (Roboto Mono Light, 14pt)."
   :group 'nano)
 
@@ -319,16 +319,16 @@ background color that is barely perceptible."
 
    
    `(nano-strong ((,light (:foreground ,nano-light-strong
-                           :weight normal))
+                           :family "Roboto Mono Medium"))
 		  (,dark  (:foreground ,nano-dark-strong
-                           :weight normal))))
+                           :family "Roboto Mono Medium"))))
 
    `(nano-strong-i ((,light (:foreground ,nano-light-background
                              :background ,nano-light-strong
-                             :weight normal))
+                             :family "Roboto Mono Medium"))
                     (,dark  (:foreground ,nano-dark-background
                              :background ,nano-dark-strong
-                             :weight normal))))
+                             :family "Roboto Mono Medium"))))
 
    `(nano-popout ((,light (:foreground ,nano-light-popout))
                   (,dark  (:foreground ,nano-dark-popout))))
@@ -361,8 +361,8 @@ background color that is barely perceptible."
 			       :color ,nano-dark-faded
 			       :style nil)))))
    `(mode-line-highlight ((t (:inherit nano-popout))))
-   `(mode-line-buffer-id ((t (:weight regular))))
-   `(mode-line-emphasis  ((t (:weight regular))))
+   `(mode-line-buffer-id ((t (:family "Roboto Mono Regular"))))
+   `(mode-line-emphasis  ((t (:family "Roboto Mono Regular"))))
 			   
    `(mode-line-inactive ((,light (:foreground ,nano-light-background
                                   :background ,nano-light-faded
