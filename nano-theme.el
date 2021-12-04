@@ -59,6 +59,8 @@
   "Default proportional serif font (Roboto Slab Light, 14pt)."
   :group 'nano)
 
+
+;; Light colors based off https://materialui.co/colors
 (defcustom nano-light-foreground "#263238" ;; Blue Grey / L900
   "Default foreground color"
   :type 'color :group 'nano-light)
@@ -272,119 +274,119 @@ background color that is barely perceptible."
 
    ;; --- Base ---------------------------------------------------------
    `(default ((,light (:foreground ,nano-light-foreground
-		       :weight     ,(face-attribute 'nano-mono :weight)
-		       :height     ,(face-attribute 'nano-mono :height)
-                       :family     ,(face-attribute 'nano-mono :family)))
+		                           :weight     ,(face-attribute 'nano-mono :weight)
+		                           :height     ,(face-attribute 'nano-mono :height)
+                                   :family     ,(face-attribute 'nano-mono :family)))
               (,dark  (:foreground ,nano-dark-foreground
-		       :weight     ,(face-attribute 'nano-mono :weight)
-		       :height     ,(face-attribute 'nano-mono :height)
-                       :family     ,(face-attribute 'nano-mono :family)))))
+		                           :weight     ,(face-attribute 'nano-mono :weight)
+		                           :height     ,(face-attribute 'nano-mono :height)
+                                   :family     ,(face-attribute 'nano-mono :family)))))
    
    `(cursor ((,light (:foreground ,nano-light-background
-                      :background ,nano-light-foreground))
+                                  :background ,nano-light-foreground))
              (,dark  (:foreground ,nano-dark-background
-                      :background ,nano-dark-foreground))))
+                                  :background ,nano-dark-foreground))))
 
    `(highlight ((,light (:background ,nano-light-highlight))
                 (,dark  (:background ,nano-dark-highlight))))
 
    `(nano-subtle ((,light (:background ,nano-light-subtle))
-		  (,dark  (:background ,nano-dark-subtle))))
+		          (,dark  (:background ,nano-dark-subtle))))
 
    `(nano-subtle-i ((,light (:foreground ,nano-light-subtle))
                     (,dark  (:foreground ,nano-dark-subtle))))
    
    `(nano-faded ((,light  (:foreground ,nano-light-faded))
-		 (,dark  (:foreground ,nano-dark-faded))))
+		         (,dark  (:foreground ,nano-dark-faded))))
 
    `(nano-faded-i ((,light (:foreground ,nano-light-background
-                            :background ,nano-light-faded))
-                    (,dark  (:foreground ,nano-dark-background
-                             :background ,nano-dark-faded))))
+                                        :background ,nano-light-faded))
+                   (,dark  (:foreground ,nano-dark-background
+                                        :background ,nano-dark-faded))))
    
    `(nano-default ((,light  (:inherit default))
-		   (,dark  (:inherit default))))
+		           (,dark  (:inherit default))))
 
    `(nano-default-i ((,light (:foreground ,nano-light-background
-                              :background ,nano-light-foreground))
+                                          :background ,nano-light-foreground))
                      (,dark  (:foreground ,nano-dark-background
-                              :background ,nano-dark-foreground))))
+                                          :background ,nano-dark-foreground))))
 
    
    `(nano-salient ((,light (:foreground ,nano-light-salient))
-		   (,dark  (:foreground ,nano-dark-salient))))
+		           (,dark  (:foreground ,nano-dark-salient))))
 
    `(nano-salient-i ((,light (:foreground ,nano-light-background
-                              :background ,nano-light-salient))
+                                          :background ,nano-light-salient))
                      (,dark  (:foreground ,nano-dark-background
-                              :background ,nano-dark-salient))))
+                                          :background ,nano-dark-salient))))
 
    
    `(nano-strong ((,light (:foreground ,nano-light-strong
-                           :family "Roboto Mono SemiBold"))
-		  (,dark  (:foreground ,nano-dark-strong
-                           :family "Roboto Mono SemiBold"))))
+                                       :family "Roboto Mono SemiBold"))
+		          (,dark  (:foreground ,nano-dark-strong
+                                       :family "Roboto Mono SemiBold"))))
 
    `(nano-strong-i ((,light (:foreground ,nano-light-background
-                             :background ,nano-light-strong
-                             :family "Roboto Mono SemiBold"))
+                                         :background ,nano-light-strong
+                                         :family "Roboto Mono SemiBold"))
                     (,dark  (:foreground ,nano-dark-background
-                             :background ,nano-dark-strong
-                             :family "Roboto Mono SemiBold"))))
+                                         :background ,nano-dark-strong
+                                         :family "Roboto Mono SemiBold"))))
 
    `(nano-popout ((,light (:foreground ,nano-light-popout))
                   (,dark  (:foreground ,nano-dark-popout))))
 
    `(nano-popout-i ((,light (:foreground ,nano-light-background
-                             :background ,nano-light-popout))
+                                         :background ,nano-light-popout))
                     (,dark  (:foreground ,nano-dark-background
-                             :background ,nano-dark-popout))))
+                                         :background ,nano-dark-popout))))
    
    `(nano-critical ((,light (:foreground ,nano-light-background
-                             :background ,nano-light-critical))
+                                         :background ,nano-light-critical))
                     (,dark  (:foreground ,nano-dark-background
-                             :background ,nano-dark-critical))))
+                                         :background ,nano-dark-critical))))
 
    `(nano-critical-i ((,light (:foreground ,nano-light-critical
-                               :background ,nano-light-background))
+                                           :background ,nano-light-background))
                       (,dark  (:foreground ,nano-dark-critical
-                               :background ,nano-dark-background))))
+                                           :background ,nano-dark-background))))
    
    ;; --- Header & mode line -----------------------------------------------
    
    `(mode-line ((,light (:foreground ,nano-light-background
-                         :background ,nano-light-foreground
-                         :box (:line-width 3
-			       :color ,nano-light-foreground
-			       :style nil)))
-		(,dark  (:foreground ,nano-dark-foreground
-			 :background ,nano-dark-faded
-                         :box (:line-width 3
-			       :color ,nano-dark-faded
-			       :style nil)))))
+                                     :background ,nano-light-foreground
+                                     :box (:line-width 3
+			                                           :color ,nano-light-foreground
+			                                           :style nil)))
+		        (,dark  (:foreground ,nano-dark-foreground
+			                         :background ,nano-dark-faded
+                                     :box (:line-width 3
+			                                           :color ,nano-dark-faded
+			                                           :style nil)))))
    `(mode-line-highlight ((t (:inherit nano-popout))))
    `(mode-line-buffer-id ((t (:family "Roboto Mono Medium"))))
    `(mode-line-emphasis  ((t (:family "Roboto Mono Medium"))))
-			   
+   
    `(mode-line-inactive ((,light (:foreground ,nano-light-background
-                                  :background ,nano-light-faded
-                                  :box (:line-width 3
-					:color ,nano-light-faded
-					:style nil)))
-			 (,dark  (:foreground ,nano-dark-faded
-                                  :background ,nano-dark-subtle
-                                  :box (:line-width 3
-					:color ,nano-dark-subtle
-					:style nil)))))
+                                              :background ,nano-light-faded
+                                              :box (:line-width 3
+					                                            :color ,nano-light-faded
+					                                            :style nil)))
+			             (,dark  (:foreground ,nano-dark-faded
+                                              :background ,nano-dark-subtle
+                                              :box (:line-width 3
+					                                            :color ,nano-dark-subtle
+					                                            :style nil)))))
 
    `(header-line ((,light (:foreground ,nano-light-foreground
-                           :background ,nano-light-subtle
-                           :inherit nil
-                           :box nil))
-		  (,dark  (:foreground ,nano-dark-foreground
-		           :background ,nano-dark-subtle
-                           :inherit nil
-                           :box nil))))
+                                       :background ,nano-light-subtle
+                                       :inherit nil
+                                       :box nil))
+		          (,dark  (:foreground ,nano-dark-foreground
+		                               :background ,nano-dark-subtle
+                                       :inherit nil
+                                       :box nil))))
 
    ;; --- Structural ---------------------------------------------------------
    '(bold                        ((t (:inherit nano-strong))))
@@ -397,8 +399,8 @@ background color that is barely perceptible."
    '(fixed-pitch                 ((t (:inherit default))))
    '(fixed-pitch-serif           ((t (:inherit default))))
    `(variable-pitch              ((t (:weight ,(face-attribute 'nano-sans :weight)
-				      :height ,(face-attribute 'nano-sans :height)
-				      :family ,(face-attribute 'nano-sans :family)))))
+				                              :height ,(face-attribute 'nano-sans :height)
+				                              :family ,(face-attribute 'nano-sans :family)))))
    
    ;; --- Semantic ---------------------------------------------------------
    '(shadow                        ((t (:inherit nano-faded))))
@@ -435,11 +437,11 @@ background color that is barely perceptible."
    
    ;; --- Windows divider ----------------------------------------------
    `(window-divider                ((,light (:foreground ,nano-light-background))
-			            (,dark  (:foreground ,nano-dark-background))))
+			                        (,dark  (:foreground ,nano-dark-background))))
    '(window-divider-first-pixel    ((t (:inherit window-divider))))
    '(window-divider-last-pixel     ((t (:inherit window-divider))))
    `(vertical-border               ((,light (:foreground ,nano-light-background))
-			            (,dark  (:foreground ,nano-dark-background))))
+			                        (,dark  (:foreground ,nano-dark-background))))
 
    ;; --- Tab bar ------------------------------------------------------
    '(tab-bar                       ((t (:inherit default))))
@@ -488,27 +490,27 @@ background color that is barely perceptible."
    ;; --- Buttons -------------------------------------------------------
    `(custom-button
      ((,light (:foreground ,nano-light-faded
-               :background ,nano-light-highlight
-               :box nil))
+                           :background ,nano-light-highlight
+                           :box nil))
       (,dark (:foreground ,nano-dark-faded
-              :background ,nano-dark-highlight
-              :box nil))))
+                          :background ,nano-dark-highlight
+                          :box nil))))
 
    `(custom-button-mouse
      ((,light (:foreground ,nano-light-foreground
-	       :background ,nano-light-subtle
-               :box nil))
+	                       :background ,nano-light-subtle
+                           :box nil))
       (,dark (:foreground ,nano-dark-foreground
-	      :background ,nano-dark-subtle
-              :box nil))))
+	                      :background ,nano-dark-subtle
+                          :box nil))))
 
    `(custom-button-pressed
      ((,light (:foreground ,nano-light-background
-	       :background ,nano-light-foreground
-               :box nil))
+	                       :background ,nano-light-foreground
+                           :box nil))
       (,dark (:foreground ,nano-dark-background
-	      :background ,nano-dark-foreground
-              :box nil))))
+	                      :background ,nano-dark-foreground
+                          :box nil))))
 
 
    
@@ -550,7 +552,7 @@ background color that is barely perceptible."
                                                    nano-face-strong)))))
    '(diff-refine-changed            ((t (:inherit nano-popout))))
    '(diff-refine-removed            ((t (:inherit nano-faded
-						  :strike-through t))))
+						                          :strike-through t))))
    
    ;; --- Message ---------------------------------------------------
    '(message-cited-text-1           ((t (:inherit nano-faded))))
@@ -640,7 +642,7 @@ background color that is barely perceptible."
    '(org-level-6                             ((t (:inherit nano-strong))))
    '(org-level-7                             ((t (:inherit nano-strong))))
    '(org-level-8                             ((t (:inherit nano-strong))))
-   '(org-link                                ((t (:inherit nano-salient))))
+   '(org-link                                ((t (:inherit nano-salient :family "Roboto Mono SemiBold"))))
    '(org-list-dt                             ((t (:inherit nano-faded))))
    '(org-macro                               ((t (:inherit nano-faded))))
    '(org-meta-line                           ((t (:inherit nano-faded))))
@@ -706,111 +708,111 @@ background color that is barely perceptible."
    '(mu4e-warning-face                      ((t (:inherit nano-popout))))
 
    ;; --- Elfeed ----------------------------------------------------
-    '(elfeed-log-date-face                    ((t (:inherit nano-faded))))
-    '(elfeed-log-info-level-face            ((t (:inherit nano-default))))
-    '(elfeed-log-debug-level-face           ((t (:inherit nano-default))))
-    '(elfeed-log-warn-level-face             ((t (:inherit nano-popout))))
-    '(elfeed-log-error-level-face            ((t (:inherit nano-popout))))
-    '(elfeed-search-tag-face                  ((t (:inherit nano-faded))))
-    '(elfeed-search-date-face                 ((t (:inherit nano-faded))))
-    '(elfeed-search-feed-face               ((t (:inherit nano-salient))))
-    '(elfeed-search-filter-face               ((t (:inherit nano-faded))))
-    '(elfeed-search-last-update-face        ((t (:inherit nano-salient))))
-    '(elfeed-search-title-face              ((t (:inherit nano-default))))
-    '(elfeed-search-tag-face                  ((t (:inherit nano-faded))))
-    '(elfeed-search-unread-count-face        ((t (:inherit nano-strong))))
-    '(elfeed-search-unread-title-face        ((t (:inherit nano-strong))))
+   '(elfeed-log-date-face                    ((t (:inherit nano-faded))))
+   '(elfeed-log-info-level-face            ((t (:inherit nano-default))))
+   '(elfeed-log-debug-level-face           ((t (:inherit nano-default))))
+   '(elfeed-log-warn-level-face             ((t (:inherit nano-popout))))
+   '(elfeed-log-error-level-face            ((t (:inherit nano-popout))))
+   '(elfeed-search-tag-face                  ((t (:inherit nano-faded))))
+   '(elfeed-search-date-face                 ((t (:inherit nano-faded))))
+   '(elfeed-search-feed-face               ((t (:inherit nano-salient))))
+   '(elfeed-search-filter-face               ((t (:inherit nano-faded))))
+   '(elfeed-search-last-update-face        ((t (:inherit nano-salient))))
+   '(elfeed-search-title-face              ((t (:inherit nano-default))))
+   '(elfeed-search-tag-face                  ((t (:inherit nano-faded))))
+   '(elfeed-search-unread-count-face        ((t (:inherit nano-strong))))
+   '(elfeed-search-unread-title-face        ((t (:inherit nano-strong))))
 
-    ;; --- Deft ----------------------------------------------------
-    '(deft-filter-string-error-face         ((t (:inherit nano-popout))))
-    '(deft-filter-string-face              ((t (:inherit nano-default))))
-    '(deft-header-face                     ((t (:inherit nano-salient))))
-    '(deft-separator-face                    ((t (:inherit nano-faded))))
-    '(deft-summary-face                      ((t (:inherit nano-faded))))
-    '(deft-time-face                       ((t (:inherit nano-salient))))
-    '(deft-title-face                       ((t (:inherit nano-strong))))
+   ;; --- Deft ----------------------------------------------------
+   '(deft-filter-string-error-face         ((t (:inherit nano-popout))))
+   '(deft-filter-string-face              ((t (:inherit nano-default))))
+   '(deft-header-face                     ((t (:inherit nano-salient))))
+   '(deft-separator-face                    ((t (:inherit nano-faded))))
+   '(deft-summary-face                      ((t (:inherit nano-faded))))
+   '(deft-time-face                       ((t (:inherit nano-salient))))
+   '(deft-title-face                       ((t (:inherit nano-strong))))
 
-    ;; --- Restructured text ------------------------------------------
-    '(rst-adornment                           ((t (:inherit nano-faded))))
-    '(rst-block                             ((t (:inherit nano-default))))
-    '(rst-comment                             ((t (:inherit nano-faded))))
-    '(rst-definition                        ((t (:inherit nano-salient))))
-    '(rst-directive                         ((t (:inherit nano-salient))))
-    '(rst-emphasis1                           ((t (:inherit nano-faded))))
-    '(rst-emphasis2                          ((t (:inherit nano-strong))))
-    '(rst-external                          ((t (:inherit nano-salient))))
-    '(rst-level-1                            ((t (:inherit nano-strong))))
-    '(rst-level-2                            ((t (:inherit nano-strong))))
-    '(rst-level-3                            ((t (:inherit nano-strong))))
-    '(rst-level-4                            ((t (:inherit nano-strong))))
-    '(rst-level-5                            ((t (:inherit nano-strong))))
-    '(rst-level-6                            ((t (:inherit nano-strong))))
-    '(rst-literal                           ((t (:inherit nano-salient))))
-    '(rst-reference                         ((t (:inherit nano-salient))))
-    '(rst-transition                        ((t (:inherit nano-default))))
-
-
-    ;; --- Markdown --------------------------------------------------
-    '(markdown-blockquote-face              ((t (:inherit nano-default))))
-    '(markdown-bold-face                     ((t (:inherit nano-strong))))
-    '(markdown-code-face                    ((t (:inherit nano-default))))
-    '(markdown-comment-face                   ((t (:inherit nano-faded))))
-    '(markdown-footnote-marker-face         ((t (:inherit nano-default))))
-    '(markdown-footnote-text-face           ((t (:inherit nano-default))))
-    '(markdown-gfm-checkbox-face            ((t (:inherit nano-default))))
-    '(markdown-header-delimiter-face          ((t (:inherit nano-faded))))
-    '(markdown-header-face                   ((t (:inherit nano-strong))))
-    '(markdown-header-face-1                 ((t (:inherit nano-strong))))
-    '(markdown-header-face-2                 ((t (:inherit nano-strong))))
-    '(markdown-header-face-3                 ((t (:inherit nano-strong))))
-    '(markdown-header-face-4                 ((t (:inherit nano-strong))))
-    '(markdown-header-face-5                 ((t (:inherit nano-strong))))
-    '(markdown-header-face-6                ((t (:inherit nano-strong))))
-    '(markdown-header-rule-face             ((t (:inherit nano-default))))
-    '(markdown-highlight-face               ((t (:inherit nano-default))))
-    '(markdown-hr-face                      ((t (:inherit nano-default))))
-    '(markdown-html-attr-name-face          ((t (:inherit nano-default))))
-    '(markdown-html-attr-value-face         ((t (:inherit nano-default))))
-    '(markdown-html-entity-face             ((t (:inherit nano-default))))
-    '(markdown-html-tag-delimiter-face      ((t (:inherit nano-default))))
-    '(markdown-html-tag-name-face           ((t (:inherit nano-default))))
-    '(markdown-inline-code-face              ((t (:inherit nano-popout))))
-    '(markdown-italic-face                    ((t (:inherit nano-faded))))
-    '(markdown-language-info-face           ((t (:inherit nano-default))))
-    '(markdown-language-keyword-face        ((t (:inherit nano-default))))
-    '(markdown-line-break-face              ((t (:inherit nano-default))))
-    '(markdown-link-face                    ((t (:inherit nano-salient))))
-    '(markdown-link-title-face              ((t (:inherit nano-default))))
-    '(markdown-list-face                      ((t (:inherit nano-faded))))
-    '(markdown-markup-face                    ((t (:inherit nano-faded))))
-    '(markdown-math-face                    ((t (:inherit nano-default))))
-    '(markdown-metadata-key-face              ((t (:inherit nano-faded))))
-    '(markdown-metadata-value-face            ((t (:inherit nano-faded))))
-    '(markdown-missing-link-face            ((t (:inherit nano-default))))
-    '(markdown-plain-url-face               ((t (:inherit nano-default))))
-    '(markdown-pre-face                     ((t (:inherit nano-default))))
-    '(markdown-reference-face               ((t (:inherit nano-salient))))
-    '(markdown-strike-through-face            ((t (:inherit nano-faded))))
-    '(markdown-table-face                   ((t (:inherit nano-default))))
-    '(markdown-url-face                     ((t (:inherit nano-salient))))
+   ;; --- Restructured text ------------------------------------------
+   '(rst-adornment                           ((t (:inherit nano-faded))))
+   '(rst-block                             ((t (:inherit nano-default))))
+   '(rst-comment                             ((t (:inherit nano-faded))))
+   '(rst-definition                        ((t (:inherit nano-salient))))
+   '(rst-directive                         ((t (:inherit nano-salient))))
+   '(rst-emphasis1                           ((t (:inherit nano-faded))))
+   '(rst-emphasis2                          ((t (:inherit nano-strong))))
+   '(rst-external                          ((t (:inherit nano-salient))))
+   '(rst-level-1                            ((t (:inherit nano-strong))))
+   '(rst-level-2                            ((t (:inherit nano-strong))))
+   '(rst-level-3                            ((t (:inherit nano-strong))))
+   '(rst-level-4                            ((t (:inherit nano-strong))))
+   '(rst-level-5                            ((t (:inherit nano-strong))))
+   '(rst-level-6                            ((t (:inherit nano-strong))))
+   '(rst-literal                           ((t (:inherit nano-salient))))
+   '(rst-reference                         ((t (:inherit nano-salient))))
+   '(rst-transition                        ((t (:inherit nano-default))))
 
 
-    ;; --- Terminal ------------------------------------------------------
-    '(term-bold        ((t (:inherit nano-strong))))
-    '(term-color-black ((t (:inherit default))))
-    '(term-color-blue ((t (:foreground "#42A5F5"   ;; material color blue L400
-                           :background "#BBDEFB"))))  ;; material color blue L100
-    '(term-color-cyan ((t (:foreground "#26C6DA"   ;; material color cyan L400
-                           :background "#B2EBF2"))))  ;; material color cyan L100
-    '(term-color-green ((t (:foreground "#66BB6A"   ;; material color green L400
-                            :background "#C8E6C9"))))  ;; material color green L100
-    '(term-color-magenta ((t (:foreground "#AB47BC"   ;; material color purple L400
-                              :background "#E1BEE7"))))  ;; material color purple L100
-    '(term-color-red ((t (:foreground "#EF5350"   ;; material color red L400
-                          :background "#FFCDD2"))))  ;; material color red L100
-    '(term-color-yellow ((t (:foreground "#FFEE58"    ;; material color yellow L400
-                             :background "#FFF9C4")))) ;; material color yellow L100
-    ))
+   ;; --- Markdown --------------------------------------------------
+   '(markdown-blockquote-face              ((t (:inherit nano-default))))
+   '(markdown-bold-face                     ((t (:inherit nano-strong))))
+   '(markdown-code-face                    ((t (:inherit nano-default))))
+   '(markdown-comment-face                   ((t (:inherit nano-faded))))
+   '(markdown-footnote-marker-face         ((t (:inherit nano-default))))
+   '(markdown-footnote-text-face           ((t (:inherit nano-default))))
+   '(markdown-gfm-checkbox-face            ((t (:inherit nano-default))))
+   '(markdown-header-delimiter-face          ((t (:inherit nano-faded))))
+   '(markdown-header-face                   ((t (:inherit nano-strong))))
+   '(markdown-header-face-1                 ((t (:inherit nano-strong))))
+   '(markdown-header-face-2                 ((t (:inherit nano-strong))))
+   '(markdown-header-face-3                 ((t (:inherit nano-strong))))
+   '(markdown-header-face-4                 ((t (:inherit nano-strong))))
+   '(markdown-header-face-5                 ((t (:inherit nano-strong))))
+   '(markdown-header-face-6                ((t (:inherit nano-strong))))
+   '(markdown-header-rule-face             ((t (:inherit nano-default))))
+   '(markdown-highlight-face               ((t (:inherit nano-default))))
+   '(markdown-hr-face                      ((t (:inherit nano-default))))
+   '(markdown-html-attr-name-face          ((t (:inherit nano-default))))
+   '(markdown-html-attr-value-face         ((t (:inherit nano-default))))
+   '(markdown-html-entity-face             ((t (:inherit nano-default))))
+   '(markdown-html-tag-delimiter-face      ((t (:inherit nano-default))))
+   '(markdown-html-tag-name-face           ((t (:inherit nano-default))))
+   '(markdown-inline-code-face              ((t (:inherit nano-popout))))
+   '(markdown-italic-face                    ((t (:inherit nano-faded))))
+   '(markdown-language-info-face           ((t (:inherit nano-default))))
+   '(markdown-language-keyword-face        ((t (:inherit nano-default))))
+   '(markdown-line-break-face              ((t (:inherit nano-default))))
+   '(markdown-link-face                    ((t (:inherit nano-salient))))
+   '(markdown-link-title-face              ((t (:inherit nano-default))))
+   '(markdown-list-face                      ((t (:inherit nano-faded))))
+   '(markdown-markup-face                    ((t (:inherit nano-faded))))
+   '(markdown-math-face                    ((t (:inherit nano-default))))
+   '(markdown-metadata-key-face              ((t (:inherit nano-faded))))
+   '(markdown-metadata-value-face            ((t (:inherit nano-faded))))
+   '(markdown-missing-link-face            ((t (:inherit nano-default))))
+   '(markdown-plain-url-face               ((t (:inherit nano-default))))
+   '(markdown-pre-face                     ((t (:inherit nano-default))))
+   '(markdown-reference-face               ((t (:inherit nano-salient))))
+   '(markdown-strike-through-face            ((t (:inherit nano-faded))))
+   '(markdown-table-face                   ((t (:inherit nano-default))))
+   '(markdown-url-face                     ((t (:inherit nano-salient))))
+
+
+   ;; --- Terminal ------------------------------------------------------
+   '(term-bold        ((t (:inherit nano-strong))))
+   '(term-color-black ((t (:inherit default))))
+   '(term-color-blue ((t (:foreground "#42A5F5"   ;; material color blue L400
+                                      :background "#BBDEFB"))))  ;; material color blue L100
+   '(term-color-cyan ((t (:foreground "#26C6DA"   ;; material color cyan L400
+                                      :background "#B2EBF2"))))  ;; material color cyan L100
+   '(term-color-green ((t (:foreground "#66BB6A"   ;; material color green L400
+                                       :background "#C8E6C9"))))  ;; material color green L100
+   '(term-color-magenta ((t (:foreground "#AB47BC"   ;; material color purple L400
+                                         :background "#E1BEE7"))))  ;; material color purple L100
+   '(term-color-red ((t (:foreground "#EF5350"   ;; material color red L400
+                                     :background "#FFCDD2"))))  ;; material color red L100
+   '(term-color-yellow ((t (:foreground "#FFEE58"    ;; material color yellow L400
+                                        :background "#FFF9C4")))) ;; material color yellow L100
+   ))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
